@@ -44,7 +44,7 @@ public class base {
 
 	}
 
-	public void getScreenShotPath(String testCaseName, WebDriver driver) throws IOException {
+	public String getScreenShotPath(String testCaseName, WebDriver driver) throws IOException {
 		System.out.println("getScreenShotPath "+ testCaseName + "  " + driver);
 		TakesScreenshot ts = (TakesScreenshot) driver;
 		File source = ts.getScreenshotAs(OutputType.FILE);
@@ -53,5 +53,6 @@ public class base {
 		FileUtils.copyFile(source, new File(destFile));
 		System.out.println(destFile);
 		System.out.println("getScreenShotPath "+ testCaseName + "  " + driver);
+		return destFile;
 	}
 }
