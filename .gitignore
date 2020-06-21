@@ -4,6 +4,9 @@
 .classpath
 .project
 .settings
+
+/test-output/
+
 #Package Files #
 *.jar
 *.war
