@@ -3,6 +3,7 @@ package Test;
 import java.io.IOException;
 
 import org.testng.Assert;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import resources.base;
@@ -24,5 +25,11 @@ public class HomePage extends base {
 		String actual = "QA Click Academy | Selenium,Jmeter,SoapUI,Appium,Database testing,QA Training Academy";
 		String expected = driver.getTitle();
 		Assert.assertEquals(actual,expected);
+	}
+	
+	@AfterTest
+
+	public void TearDown() throws IOException {
+		driver.close();
 	}
 }
