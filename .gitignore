@@ -1,1 +1,19 @@
+**/target/
 /target/
+*/target/*
+.classpath
+.project
+.settings
+#Package Files #
+*.jar
+*.war
+*.ear
+*.nar
+*.zip
+*.tar.gz
+*.rar
+
+*.log
+
+*.iml
+*.idea
